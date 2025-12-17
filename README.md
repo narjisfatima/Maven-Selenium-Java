@@ -1,0 +1,1 @@
+A Selenium automation framework built with Java and managed using Maven.
