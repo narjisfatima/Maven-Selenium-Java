@@ -16,15 +16,15 @@ public class LoginPage {
     }
 
     public void openLoginPage(){
-        driver.get("url");
+        driver.get("https://www.google.com");
     }
 
-    public void enterUsername(){
-        driver.findElement(username).sendKeys("User name");
+    public void enterUsername(String user){
+        driver.findElement(username).sendKeys(user);
     }
 
-    public void enterPassword(){
-        driver.findElement(password).sendKeys("password");
+    public void enterPassword(String pass){
+        driver.findElement(password).sendKeys(pass);
     }
 
     public void clickLogin(){
