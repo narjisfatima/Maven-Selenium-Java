@@ -8,7 +8,6 @@ public class DriverFactory {
     
     public static WebDriver driver;
     
-
     public static WebDriver getDriver(){
         if(driver == null){
             WebDriverManager.chromedriver().setup();
@@ -18,8 +17,7 @@ public class DriverFactory {
         return driver;
     }
 
-
-    public void quitDriver(){
+    public static void quitDriver(){
         if( driver !=null ){
             driver.quit();
             driver = null;
