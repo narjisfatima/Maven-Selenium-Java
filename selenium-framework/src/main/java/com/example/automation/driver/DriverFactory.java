@@ -12,6 +12,7 @@ public class DriverFactory {
     public static WebDriver getDriver(){
         if(driver == null){
             ChromeOptions options = new ChromeOptions();
+            options.setBinary("/usr/bin/google-chrome");
             options.addArguments("--headless=new");        // Run without GUI
             options.addArguments("--no-sandbox");          // Disable sandbox for root/containers
             options.addArguments("--disable-dev-shm-usage"); // Avoid /dev/shm crashes
