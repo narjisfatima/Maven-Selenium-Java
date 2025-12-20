@@ -25,10 +25,10 @@ jobs:
           cache: maven
 
       - name: Verify Maven
-        with: mvn -v
+        run: mvn -v
 
       - name: Run Tests
-        with: mvn clean Install
+        run: mvn clean install
 
       - name: Upload Test Reports
         if: always()
