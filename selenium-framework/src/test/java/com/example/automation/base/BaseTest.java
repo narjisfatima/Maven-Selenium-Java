@@ -11,13 +11,13 @@ public class BaseTest {
     protected WebDriver driver;
 
     @BeforeTest
-    public void setup(){
+    public void setup() {
         driver = DriverFactory.getDriver();
     }
 
     @AfterTest
-    public void teardown(){
+    public void teardown() {
         DriverFactory.quitDriver();
     }
-    
+
 }
