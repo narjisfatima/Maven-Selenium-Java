@@ -28,6 +28,7 @@ jobs:
         run: mvn -v
 
       - name: Run Tests
+        working-directory: selenium-framework
         run: mvn clean install
 
       - name: Upload Test Reports
@@ -35,4 +36,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: surefire-reports
-          path: target/surefire-reports
+          path: selenium-framework/target/surefire-reports
