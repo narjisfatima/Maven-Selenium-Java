@@ -17,7 +17,7 @@ public class DriverFactory {
             options.addArguments("--disable-dev-shm-usage"); // Avoid /dev/shm crashes
             options.addArguments("--disable-gpu");         // Disable GPU for headless Linux
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(options);
             driver.manage().window().maximize();
         }
         return driver;
