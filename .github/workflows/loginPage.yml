@@ -25,21 +25,17 @@ jobs:
           cache: maven
 
       - name: Verify Maven
+        working-directory: selenium-framework
         run: mvn -v
 
-        # 🔴 INSTALL CHROME HERE
+      # 🔴 Install Chrome BEFORE tests
       - name: Install Google Chrome
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget gnupg
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get -f install -y
+          sudo apt-get install -y google-chrome-stable
 
-      # (Optional but recommended)
       - name: Verify Chrome installation
-        run: |
-          google-chrome --version
-          which google-chrome
+        run: google-chrome --version
 
       - name: Run Tests
         working-directory: selenium-framework
