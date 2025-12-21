@@ -28,15 +28,6 @@ jobs:
         working-directory: selenium-framework
         run: mvn -v
 
-      # 🔴 Install Chrome BEFORE tests
-      - name: Install Google Chrome
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
-
-      - name: Verify Chrome installation
-        run: google-chrome --version
-
       - name: Run Tests
         working-directory: selenium-framework
         run: mvn clean install
