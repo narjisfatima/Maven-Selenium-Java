@@ -122,3 +122,7 @@ Then follow the steps:
 }
 
 It controls how VS Code updates project configuration (like Maven/Gradle changes).
+
+## surefire-reports
+
+Running mvn test automatically generates .xml and .txt reports, which capture the test execution results similar to what you see in the console.
