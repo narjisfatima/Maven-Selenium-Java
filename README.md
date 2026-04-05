@@ -128,3 +128,25 @@ It controls how VS Code updates project configuration (like Maven/Gradle changes
 ## surefire-reports
 
 Running mvn test automatically generates .xml and .txt reports, which capture the test execution results similar to what you see in the console.
+
+## **/*.java
+
+**/*.java means “search all folders recursively and include every .java file.”
+
+## If your file name doesn’t end with Test, configure it in pom.xml
+
+<configuration>
+  <includes>
+    <include>**/*.java</include>
+  </includes>
+</configuration>
+
+This ensures all .java files are considered during test execution, even if they don’t follow the default naming convention.
+
+## BeforeAll & AfterAll method should be static 
+
+@BeforeAll and @AfterAll must be static because they run outside the lifecycle of test instances, so JUnit needs class-level methods that don’t depend on objects.
+
+Alternative way is to add > @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+
+PER_CLASS shares one object across all test methods in the same class, so changes in one test can affect others—but it does not impact other test classes.
