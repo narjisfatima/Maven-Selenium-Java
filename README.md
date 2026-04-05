@@ -1,5 +1,7 @@
 # Step-by-Step Guide to Project Creation
 
+JUnit is a Java testing framework used to write and execute automated unit tests to ensure code quality and correctness.
+
 ## 1) Install JDK
 
 * Install JDK on your system
