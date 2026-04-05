@@ -113,3 +113,12 @@ Then follow the steps:
 * Maven project is created successfully
 * Standard folder structure is generated
 * Project is ready for development
+
+
+## About settings.json
+
+{
+  "java.configuration.updateBuildConfiguration": "interactive"
+}
+
+It controls how VS Code updates project configuration (like Maven/Gradle changes).
